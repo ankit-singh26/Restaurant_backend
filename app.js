@@ -11,7 +11,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ['https://restaurantreservation-9ttqalsel-ankit-singhs-projects-160da377.vercel.app', "http://localhost:3000", "http://localhost:4000"],
+    origin: [process.env.FRONTEND_URL, "http://localhost:3000", "http://localhost:4000"],
     methods: ["POST"],
     credentials: true,
   })
